@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.IO;
 
 public class cameraScripts : MonoBehaviour
 {
@@ -38,6 +39,9 @@ public class cameraScripts : MonoBehaviour
     //Pathfinder
     public Grid pathFinder;
 
+    //Public Text Asset
+    public TextAsset defaultMapFile;
+
     UnitInfo selectedUnitInfo;
     Unit selectedUnitAcript;
     public ClickEvents clickEvent;
@@ -66,6 +70,7 @@ public class cameraScripts : MonoBehaviour
 
     public bool MoveUnit = false;
     public string unitAction = "None";
+    public string[] mapLoad;
 
     Vector3 newPosition;
     Vector3 gotoPoint;
@@ -86,7 +91,15 @@ public class cameraScripts : MonoBehaviour
 
         newPosition = transform.position;
 
-        string[] mapLoad = PlayerPrefs.GetString("DefaultMap").Split(',');
+        if(PlayerPrefs.GetString("DefaultMap").Length < 3)
+        {
+            mapLoad = defaultMapFile.text.Split(',');
+        }
+        else
+        {
+            mapLoad = PlayerPrefs.GetString("DefaultMap").Split(',');
+        }
+
         int MapCounter = 2;
 
         gridX = int.Parse(mapLoad[0]);

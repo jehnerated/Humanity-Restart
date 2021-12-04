@@ -117,6 +117,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
@@ -153,6 +155,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12610}
     - Class: 114
       Script: {instanceID: 12796}
+    - Class: 114
+      Script: {instanceID: 12922}
     - Class: 114
       Script: {instanceID: 12966}
     - Class: 114
@@ -942,7 +946,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: 628d0bfd3e4c0fed8dbfe112b216dc16
+      Hash: 27d7773fe5ab870011ba6f00731420cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cameraScripts
